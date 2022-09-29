@@ -1,6 +1,45 @@
 # scoa-sample
 scoa架构样例
 
+
+## 使用说明
+### 编译骨架
+在根目录直接执行如下命令：
+```shell
+# 构建骨架
+mvn archetype:create-from-project
+# 进入骨架项目
+cd target/generated-sources/archetype
+# 编译骨架
+mvn install
+```
+此时骨架项目已经在本地编译完成
+### 基于骨架构建
+#### 交互模式
+在新建项目的目录里执行如下命令：
+```shell
+mvn archetype:generate -DarchetypeCatalog=local
+```
+交互命令将会按顺序要求输入如下信息：
+1. 在本地的骨架项目中选择scoa-archetype，输入序号
+2. 输入groupId
+3. 输入artifactId
+4. 输入version
+5. 输入默认公共包名
+6. 交互窗口显示已输入的内容，并要求确认，输入Y表示确认  
+
+构建成功，项目已成功创建，打开项目会发现项目是一个完整的scoa结构。
+#### 命令模式
+骨架编译完成后，打开本地仓库目录，把 **io/github/egd-prodigal/scoa-archetype** 目录复制到 **org/apache/maven/archetypes** 里，可通过如下命令执行：
+```shell
+cp -r io/github/egd-prodigal/scoa-archetype org/apache/maven/archetypes
+```
+然后在新建项目的目录里执行如下脚本：
+```shell
+mvn archetype:generate -DgroupId=你的GroupId -DartifactId=你的ArtifactId -Dversion=你的Version -DarchetypeArtifactId=scoa-archetype -DinteractiveMode=false
+```
+项目自动创建完成。
+
 ## 模块结构
 ![images](https://yeemin.site/scoa/scoa.png)
 
