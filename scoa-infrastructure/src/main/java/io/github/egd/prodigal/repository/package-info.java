@@ -1,0 +1,1 @@
+package io.github.egd.prodigal.repository;
