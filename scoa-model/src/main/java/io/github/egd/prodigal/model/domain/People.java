@@ -1,23 +1,38 @@
 package io.github.egd.prodigal.model.domain;
 
-// 暂定这几个属性
+/**
+ * 人的领域模型，暂定几个属性
+ */
 public abstract class People {
 
+    /**
+     * 生卒年不详，用这个表示
+     */
     public static final String BIRTH_DEAD_NOT_RECORD = "Not Record";
 
-    // 姓
+    /**
+     * 姓
+     */
     private String firstName;
 
-    // 名
+    /**
+     * 名
+     */
     private String lastName;
 
-    // 字
+    /**
+     * 字
+     */
     private String styleName;
 
-    // 生于
+    /**
+     * 生于
+     */
     private String birth;
 
-    // 卒于
+    /**
+     * 卒于
+     */
     private String dead;
 
     public String getBirth() {

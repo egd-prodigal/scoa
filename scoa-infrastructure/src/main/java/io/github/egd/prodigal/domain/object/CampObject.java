@@ -14,6 +14,9 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * 阵营领域对象
+ */
 @Component
 @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class CampObject extends Camp {
@@ -24,6 +27,11 @@ public class CampObject extends Camp {
     @Autowired
     private PeopleMapper peopleMapper;
 
+    /**
+     * 查看阵营的将领们
+     *
+     * @return java.util.List
+     */
     @Override
     public List<General> getGenerals() {
         if (super.generals == null) {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>scoa</artifactId>
         <groupId>io.github.egd-prodigal</groupId>
@@ -15,7 +16,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <description>应用门面，提供rest接口给外部调用，包括web、app、小程序、外部接口等，相当于Controller但不仅限于controller</description>
+    <description>应用门面，提供rest接口给外部调用，包括web、app、小程序、外部接口等，相当于Controller但不仅限于controller
+    </description>
 
     <dependencies>
         <dependency>

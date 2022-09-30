@@ -13,15 +13,20 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+/**
+ * 关羽诛颜良执行器
+ */
 @Component
 public class KillYanliangCmdExe {
 
     private final Logger logger = LoggerFactory.getLogger(KillYanliangCmdExe.class);
 
-
     @Autowired
     PeopleMapper peopleMapper;
 
+    /**
+     * 诛颜良
+     */
     public void kill() {
         // 曹操与曹操阵营
         Lord caocao = Lord.fromPeople(peopleMapper.query("曹", "操", "孟德"));
@@ -31,10 +36,7 @@ public class KillYanliangCmdExe {
         logger.info("曹操阵营站了{}个人", generals.size());
         caocao.speak("河北人马，如此雄壮");
         // 关云长
-        Warrior guanyu = DomainObjectFactory.create(General.class, g -> {
-            g.setPeople(peopleMapper.query("关", "羽", "云长"));
-            g.setCamp(caocaoCamp);
-        });
+        Warrior guanyu = DomainObjectFactory.letUsSeeGuanyu(peopleMapper.query("关", "羽", "云长"), caocaoCamp);
         guanyu.speak("以吾关之如土鸡瓦犬尔");
         caocao.speak("麾盖之下，绣袍金甲，持刀立马者，乃颜良也");
         guanyu.speak("吾观颜良，如插标卖首耳！");

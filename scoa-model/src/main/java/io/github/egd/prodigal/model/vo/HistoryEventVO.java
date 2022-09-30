@@ -1,5 +1,8 @@
 package io.github.egd.prodigal.model.vo;
 
+/**
+ * 历史事件VO
+ */
 public class HistoryEventVO {
 
     private String event;
