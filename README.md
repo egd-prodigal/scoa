@@ -43,6 +43,8 @@ mvn archetype:generate -DgroupId=你的GroupId -DartifactId=你的ArtifactId -Dv
 ```
 项目自动创建完成。
 
+> 本项目也是源于示例项目生成的骨架创建而成
+
 ## 模块结构
 ![images](https://yeemin.site/scoa/scoa.png)
 
