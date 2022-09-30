@@ -4,6 +4,7 @@ scoa架构样例
 
 ## 使用说明
 ### 编译骨架
+#### 手动构建
 在根目录直接执行如下命令：
 ```shell
 # 构建骨架
@@ -14,6 +15,8 @@ cd target/generated-sources/archetype
 mvn install
 ```
 此时骨架项目已经在本地编译完成
+#### 基于已构建好了的
+骨架项目已上传github，参照 https://github.com/egd-prodigal/scoa-archetype ，直接拉取scoa-archetype代码，本地mvn install一下即可。
 ### 基于骨架构建
 #### 交互模式
 在新建项目的目录里执行如下命令：
