@@ -11,18 +11,20 @@ scoa架构样例
 mvn archetype:create-from-project
 # 进入骨架项目
 cd target/generated-sources/archetype
-# 编译骨架
+# 本地编译骨架
 mvn install
 ```
 此时骨架项目已经在本地编译完成
 #### 基于已构建好了的
 骨架项目已上传github，并定期更新，参照 https://github.com/egd-prodigal/scoa-archetype ，直接拉取scoa-archetype代码，本地编译即可:
 ```shell
+# 拉取项目
 git clone git@github.com:egd-prodigal/scoa-archetype.git
+# 进入工程目录
 cd scoa-archetype
+# 本地编译骨架
 mvn install
 ```
-
 ### 基于骨架构建
 #### 交互模式
 在新建项目的目录里执行如下命令：
@@ -37,6 +39,8 @@ mvn archetype:generate -DarchetypeCatalog=local
 5. 输入默认公共包名
 6. 交互窗口显示已输入的内容，并要求确认，输入Y表示确认  
 
+入下图所示：
+![images](https://yeemin.site/scoa/archetype-generate.png)
 构建成功，项目已成功创建，打开项目会发现项目是一个完整的scoa结构。
 #### 命令模式
 骨架编译完成后，打开本地仓库目录，把 **io/github/egd-prodigal/scoa-archetype** 目录复制到 **org/apache/maven/archetypes** 里，可通过如下命令执行：
