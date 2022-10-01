@@ -16,7 +16,7 @@ mvn install
 ```
 此时骨架项目已经在本地编译完成
 #### 基于已构建好了的
-骨架项目已上传github，参照 https://github.com/egd-prodigal/scoa-archetype ，直接拉取scoa-archetype代码，本地编译即可:
+骨架项目已上传github，并定期更新，参照 https://github.com/egd-prodigal/scoa-archetype ，直接拉取scoa-archetype代码，本地编译即可:
 ```shell
 git clone git@github.com:egd-prodigal/scoa-archetype.git
 cd scoa-archetype
