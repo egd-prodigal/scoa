@@ -1,6 +1,5 @@
-# scoa-sample
-scoa架构样例
-
+# scoa
+简单易懂的面向对象架构：simple comprehensible object-oriented architecture，旨在提供一个简单的微服务分包设计，让微服务开发的代码结构更加清晰明了，本项目是一个maven骨架项目，需本地编译后使用。
 
 ## 使用说明
 ### 编译骨架
