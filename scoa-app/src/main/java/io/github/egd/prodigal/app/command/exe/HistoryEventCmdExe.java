@@ -1,4 +1,4 @@
-package io.github.egd.prodigal.app.command;
+package io.github.egd.prodigal.app.command.exe;
 
 import io.github.egd.prodigal.repository.entity.HistoryEventPO;
 import io.github.egd.prodigal.repository.mapper.HistoryEventMapper;

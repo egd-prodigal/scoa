@@ -46,7 +46,25 @@ mvn archetype:generate -DgroupId=你的GroupId -DartifactId=你的ArtifactId -Dv
 > 本项目也是源于示例项目生成的骨架创建而成
 
 ## 模块结构
+### 功能模块结构
+功能应用结构如下图所示，包括提供业务接口能力的facade、业务功能逻辑实现app、微服务接口声明client、模型模块model、基础设施模块infrastructure。
 ![images](https://yeemin.site/scoa/scoa.png)
+骨架自动生成的项目包含一个starter模块，依赖facade模块，提供SpringBoot的启动方法，用以启动单功能服务应用。
+### 包结构
+骨架生成的各个模块的包路径如下所示：
+![images](https://yeemin.site/scoa/package.png)
+### 微服务应用架构
+每个业务功能原则上都应以独立的架构存在，多个业务功能可以基于同一个应用部署，服务由业务模块提供，但服务能力由运行的应用承载，因此，在一个集成多业务的系统应用，代码结构应该如下所示：
+![images](https://yeemin.site/scoa/scoa-starter.png)
+starter模块可以依赖facade模块以提供业务接口能力，也可以直接依赖app模块以仅提供微服务provider的能力。
+### 业务系统公共依赖
+在一个完整的业务系统里，必然存在相对"底层"的模型，或者一些相对公共的模型，在这种情况下，势必存在业务功能依赖公共方法的需求，在这个架构里，应当由底层公共能力编写者提供domain以及infrastructure给业务功能开发者直接调用，业务功能模块的app直接依赖这两个模块：
+![images](https://yeemin.site/scoa/scoa-dependency.png)
+## 微服务调用
+本架构提供了client模块用以定义微服务接口能力，其实现在app模块的provider包里，而其他微服务调用时，因也在app模块里调用，微服务调用示意图如下：
+![images](https://yeemin.site/scoa/scoa-rpc.png)
+
+> 本人在编写scoa-rpc，以提供遵循如上微服务体系规则的微服务rpc能力，敬请期待。
 
 ## 样例说明
 我以三国演义里“关羽诛颜良”为例，编写这个架构样例。  

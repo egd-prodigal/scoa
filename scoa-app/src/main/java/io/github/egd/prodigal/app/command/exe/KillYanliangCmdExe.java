@@ -1,4 +1,4 @@
-package io.github.egd.prodigal.app.command;
+package io.github.egd.prodigal.app.command.exe;
 
 import io.github.egd.prodigal.model.domain.Camp;
 import io.github.egd.prodigal.model.domain.General;

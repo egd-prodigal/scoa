@@ -1,7 +1,7 @@
 package io.github.egd.prodigal.app.service.impl;
 
-import io.github.egd.prodigal.app.command.HistoryEventCmdExe;
-import io.github.egd.prodigal.app.command.KillYanliangCmdExe;
+import io.github.egd.prodigal.app.command.exe.HistoryEventCmdExe;
+import io.github.egd.prodigal.app.command.exe.KillYanliangCmdExe;
 import io.github.egd.prodigal.app.command.query.HistoryQueryExe;
 import io.github.egd.prodigal.app.service.StoryService;
 import io.github.egd.prodigal.model.vo.HistoryEventVO;
