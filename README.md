@@ -39,7 +39,7 @@ mvn archetype:generate -DarchetypeCatalog=local
 5. 输入默认公共包名
 6. 交互窗口显示已输入的内容，并要求确认，输入Y表示确认  
 
-入下图所示：
+如下图所示：
 ![images](https://yeemin.site/scoa/archetype-generate.png)
 构建成功，项目已成功创建，打开项目会发现项目是一个完整的scoa结构。
 #### 命令模式
