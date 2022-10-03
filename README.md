@@ -201,6 +201,7 @@ mvn archetype:generate -DgroupId=你的GroupId -DartifactId=你的ArtifactId -Dv
 </tr>
 </tbody>
 </table>
+
 ### 微服务应用架构
 每个业务功能原则上都应以独立的架构存在，多个业务功能可以基于同一个应用部署，服务由业务模块提供，但服务能力由运行的应用承载，因此，在一个集成多业务的系统应用，代码结构应该如下所示：
 ![images](https://yeemin.site/scoa/scoa-starter.png)
